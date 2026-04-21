@@ -43,14 +43,6 @@ The project uses two main tables:
 ### Tool Used
 Microsoft SQL Server Management Studio
 
-### 🧠 Sample Query
-
-```sql
-SELECT TOP (10) b.book_name, r.gross_sales
-FROM dbo.books b
-JOIN dbo.ratings r ON b.book_id = r.book_id
-ORDER BY r.gross_sales DESC;
-
 ### 🚀 How to Run
 Open SQL Server Management Studio (SSMS)
 Create a database (e.g., Book store sales and rating)
@@ -66,3 +58,16 @@ Customer ratings help identify quality vs popularity
 The analysis shows that a few top-performing books contribute significantly to overall sales, highlighting a strong revenue concentration.
 Customer ratings and sales do not always align, indicating that popularity and quality can differ.
 Genre-wise insights reveal consistent trends, helping identify high-demand categories for better business decisions.
+
+
+### 🧠 Sample Query
+
+```sql
+SELECT TOP (10) b.book_name, r.gross_sales
+FROM dbo.books b
+JOIN dbo.ratings r ON b.book_id = r.book_id
+ORDER BY r.gross_sales DESC;
+
+
+
+
