@@ -27,46 +27,91 @@ The project uses two main tables:
 
 ---
 
-## 🔍 Key Analysis Performed
+## 🛠️ SQL Concepts Used
 
-### ✅ Top-Selling Books
-- Identified top 10 books based on gross sales
-
-### ✅ Average Rating by Genre
-- Calculated average ratings for each genre
-
-### ✅ Sales Performance Insights
-- Compared book sales across different categories
+* SELECT, WHERE, ORDER BY
+* GROUP BY & Aggregations
+* JOIN operations
+* Subqueries
+* Filtering & Sorting
 
 ---
 
-### Tool Used
-Microsoft SQL Server Management Studio
+## 🔍 Analysis Performed
 
-### 🚀 How to Run
-Open SQL Server Management Studio (SSMS)
-Create a database (e.g., Book store sales and rating)
-Import or create tables (books, ratings)
-Run the SQL script provided in this repository
+### 📈 Sales Analysis
 
-### 📊 Key Insights
-High-selling books are not always the highest-rated
-Certain genres consistently perform better in sales
-Customer ratings help identify quality vs popularity
+* Identified top-selling books
+* Compared revenue across genres
+* Analyzed sales trends
 
-### Conclusion
-The analysis shows that a few top-performing books contribute significantly to overall sales, highlighting a strong revenue concentration.
-Customer ratings and sales do not always align, indicating that popularity and quality can differ.
-Genre-wise insights reveal consistent trends, helping identify high-demand categories for better business decisions.
+---
+
+### ⭐ Ratings Analysis
+
+* Evaluated average ratings per genre
+* Compared high-rated vs low-rated books
+* Studied relationship between ratings and sales
+
+---
+
+### 📚 Genre & Author Insights
+
+* Top-performing genres
+* Authors with highest sales
+* Genre popularity trends
+
+---
+
+## 💡 Key Insights
+
+* 📊 Certain genres contribute significantly to total sales
+* ⭐ Higher-rated books tend to perform better in sales
+* 📚 A few authors dominate overall revenue
+* 📉 Some books have high ratings but low sales (hidden opportunity)
+
+---
+
+## 🧹 Data Preparation
+
+* Cleaned inconsistent values
+* Ensured correct data types
+* Handled missing values
+* Structured data for SQL queries
+
+---
+
+## 🛠️ Tools Used
+
+* Microsoft SQL Server Management System
+* Data Analysis Techniques
+
+---
+
+## 📂 Project Structure
+
+```id="booktree"
+├── data/
+├── sql_queries/
+├── results/
+└── README.md
+```
+
+---
+
+## 📸 Sample Queries
+
+--Top-Selling Books by Gross Sales
 
 
-### 🧠 Sample Query
-
-```sql
 SELECT TOP (10) b.book_name, r.gross_sales
 FROM dbo.books b
-JOIN dbo.ratings r ON b.book_id = r.book_id
+JOIN dbo.Ratings r ON b.book_id = r.book_id
 ORDER BY r.gross_sales DESC;
+```
+
+---
+
 
 
 
