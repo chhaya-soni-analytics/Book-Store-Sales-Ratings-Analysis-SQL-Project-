@@ -50,5 +50,3 @@ SELECT TOP (10) b.book_name, r.gross_sales
 FROM dbo.books b
 JOIN dbo.ratings r ON b.book_id = r.book_id
 ORDER BY r.gross_sales DESC;
-<img width="240" height="171" alt="image" src="https://github.com/user-attachments/assets/f08f1bd9-4004-4ddf-828e-4fbfad1fd7e7" />
-
